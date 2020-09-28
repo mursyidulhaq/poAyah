@@ -4,7 +4,7 @@ $server_key ="SB-Mid-server-GHlI5dlA8pPy768TMdPCCH3k";
 $is_production = false;
 $api_url = $is_production ?  
 'https://app.midtrans.com/snap/v1/transactions'; :
- 'https://app.sandbox.midtrans.com/snap/v1/transactions';
+ 'https://app.sandbox.midtrans.com/payment-links/1601279486118';
 
  if (!strpos($_SERVER['REQUEST_URI'],'/change')) {
      http_response_code(404);
