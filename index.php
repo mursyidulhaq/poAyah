@@ -5,6 +5,7 @@ $is_production = false;
 $api_url = $is_production ? 
 'https://app.midtrans.com/snap/v1/transactions'; :
  'https://app.sandbox.midtrans.com/snap/v1/transactions';
+
  if (!strpos($_SERVER['REQUEST_URI'],'/change')) {
      http_response_code(404);
      echo "wrong path, make sure it's '/change'";exit();
@@ -49,4 +50,4 @@ $api_url = $is_production ?
 
 
   }
-   
+   ?>
