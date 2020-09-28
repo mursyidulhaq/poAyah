@@ -2,7 +2,7 @@
 
 $server_key ="SB-Mid-server-GHlI5dlA8pPy768TMdPCCH3k";
 $is_production = false;
-$api_url = $is_production ? 
+$api_url = $is_production ?  
 'https://app.midtrans.com/snap/v1/transactions'; :
  'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
@@ -34,7 +34,7 @@ $api_url = $is_production ?
 
          CURLOPT_HTTPHEADER => array(
              'Content-Type:application/json',
-             'Accept:application/json',
+             'Accept: application/json',
              'Authorization:Basic' .base64_encode($server_key . ':')
 
          ),
@@ -43,7 +43,7 @@ $api_url = $is_production ?
         curl_setopt_array($ch,$curl_options);
         $result = array(
             'body'=>curl_exec($ch),
-            'http_code'=>curl_getinfo(Sch,CURLINFO_HTTP_CODE),
+            'http_code'=>curl_getinfo($ch,CURLINFO_HTTP_CODE),
 
         
         );
@@ -51,4 +51,4 @@ $api_url = $is_production ?
 
    
   }
-   ?>
+   
